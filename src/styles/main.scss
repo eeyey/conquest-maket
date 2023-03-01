@@ -1,0 +1,234 @@
+.collections {
+  $line-width: 50px;
+  $line-margin: 15px;
+  $block-padding: $line-margin + $line-width;
+
+  background: #fdfdfb;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    max-width: 410px;
+    z-index: 2;
+  }
+
+  &__watch {
+    margin-left: 145px;
+    height: 768px;
+    position: relative;
+    width: 506px;
+  }
+
+  &__watch-ellipse {
+    position: absolute;
+    left: -190px;
+  }
+
+  &__watch-photo {
+    position: relative;
+    transform: translateY(-10px);
+    z-index: 2;
+  }
+
+  &__watch-tooltip {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-family: "Prata";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1b1a17;
+
+    .horizontal-line {
+      width: 50px;
+    }
+  }
+
+  &__watch-price {
+    top: 148px;
+    left: -65px;
+
+    .horizontal-line {
+      margin-left: 15px;
+    }
+  }
+
+  &__watch-diam {
+    bottom: 114px;
+    right: -70px;
+
+    .horizontal-line {
+      margin-right: 15px;
+    }
+  }
+
+  &__title {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 60px;
+    color: #1b1a17;
+    display: flex;
+    align-items: center;
+
+    .horizontal-line {
+      width: $line-width;
+      margin-right: $line-margin;
+      transform: translateY(6px);
+    }
+  }
+
+  &__subtitle {
+    margin: 18px 0px 40px $block-padding;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #1b1a17;
+  }
+
+  &__text {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(27, 26, 23, 0.82);
+    margin: 0 0 60px $block-padding;
+  }
+
+  .button {
+    margin-left: $block-padding;
+  }
+}
+
+.popular-models {
+  padding-top: 80px;
+  padding-bottom: 85px;
+
+  .section-title {
+    text-align: center;
+  }
+
+  &__more {
+    text-align: right;
+
+    a {
+      text-decoration: none;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #444240;
+      padding-bottom: 5.5px;
+      display: inline-block;
+      border-bottom: 1px solid #c4c0b6;
+      margin-bottom: 25.5px;
+      cursor: pointer;
+    }
+  }
+
+  .models-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about-quality {
+  background: url("/static/lines_banner.png") right center no-repeat,
+    linear-gradient(to right, #f7f5ef 34%, #fdfdfb 34%);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    padding-top: 50px;
+
+    margin-left: 70px;
+    .slider__nav {
+      padding-right: 70px;
+    }
+  }
+
+  &__info {
+    margin-left: 70px;
+  }
+
+  &__text {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #444240;
+    margin: 38px 0px 45px 0px;
+  }
+
+  .button {
+    background: #d4b098;
+  }
+}
+
+.social {
+  padding: 80px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #444240;
+    margin: 40px 0 120px 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    margin-right: 18px;
+
+    &:last-child {
+      margin-right: none;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+  }
+
+  &__watch-images {
+    display: grid;
+    grid-template-areas:
+      "pic1 pic3"
+      "pic2 pic3";
+    grid-template-columns: 242px 377px;
+    grid-template-rows: 228px;
+    grid-gap: 5px;
+
+    img {
+      height: 100%;
+      width: 100%;
+
+      &:nth-child(0) {
+        grid-area: pic1;
+      }
+      &:nth-child(1) {
+        grid-area: pic2;
+      }
+      &:nth-child(2) {
+        grid-area: pic3;
+      }
+    }
+  }
+}

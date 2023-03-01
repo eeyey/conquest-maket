@@ -1,0 +1,42 @@
+footer {
+  background: $color-dark-primary;
+  padding: 67px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    margin-bottom: 14px;
+    transform: translateY(-14px);
+  }
+
+  .footer-row__title {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 33px;
+  }
+
+  .footer__item {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 15px;
+
+    a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    &:last-child {
+      margin: none;
+    }
+  }
+}

@@ -25,11 +25,7 @@ const optimization = () => {
   };
 
   if (!isDev) {
-    config.minimizer = [
-      new OptimizeCssAssetWebpackPlugin(),
-      new CssMinimizerPlugin(),
-      new TerserWebpackPlugin(),
-    ];
+    config.minimizer = [new CssMinimizerPlugin(), new TerserWebpackPlugin()];
   }
 
   return config;
@@ -86,12 +82,12 @@ const plugins = () => {
       patterns: [
         {
           from: "./static",
-          to: "./",
+          to: "./static",
         },
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: "[name].css",
     }),
   ];
 
@@ -103,7 +99,7 @@ const plugins = () => {
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
-  entry: ["@babel/polyfill", "./index.ts"],
+  entry: "./styles/index.scss",
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "public"),

@@ -1,0 +1,19 @@
+@import "./reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Prata&display=swap&family=Roboto:wght@400;500;700&display=swap");
+
+$color-dark-primary: #444240;
+$color-primary: #fdfdfb;
+
+$logo-color: #555248;
+
+.container {
+  $container-width: 1150px;
+
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+@import "./common.scss";
+@import "./header.scss";
+@import "./main.scss";
+@import "./footer.scss";

@@ -7,11 +7,9 @@
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
-    "paths": {
-      "@components/": ["./components"],
-      "@components/*": ["./components/*"],
-      "@core/": ["./core"],
-      "@core/*": ["./core/*"]
-    }
-  }
+
+    "paths": {}
+  },
+  "include": ["src/**/*"],
+  "exclude": ["public/"]
 }
